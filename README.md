@@ -84,6 +84,8 @@ Microchip’s free IDE, compiler and graphical code generators are used througho
 * MPLAB Code Configurator (MCC) [v5.0.3](https://www.microchip.com/mplab/mplab-code-configurator)
 * TMR2 MCC Melody driver 4.0.10
 * UART MCC Melody driver 1.6.0
+* MCC Melody Core 2.1.9
+* I2C Host MCC Melody driver 1.0.2
 * Microchip PIC16F1xxxx Series Device Support [1.9.163 or newer](https://packs.download.microchip.com/)
 
 ***Note: For running the demo, the installed tool versions should be same or later. This example is not tested with previous versions.***
@@ -135,7 +137,7 @@ For displaying the basic heartrate count for verifying and debugging purposes, t
   <br>Fig 11: EUSART Configuration Settings in MCC tool<br>
 </p>
 
-##Timer Configuration
+## Timer Configuration
 
 <p align="center">
   <img width=600 height=auto src="images/timer_config.png">
