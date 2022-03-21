@@ -46,9 +46,10 @@
         "keywords": [
 			"Melody",
 			"Curiosity Nano",
-			"Heart rate",
+			"Curiosity",
+			"BPM",
 			"LCD",
-			"MSSP mode switching"
+			"Heartbeat"
 		],
         "additionalData": {
             "longDescription": {
