@@ -7,7 +7,7 @@
  * 
  * @brief This file contains the driver code for Interrupt Manager.
  * 
- * @version Interrupt Manager Driver Version 2.03
+ * @version Interrupt Manager Driver Version 2.0.4
 */
 
 /*
@@ -33,6 +33,7 @@
 
 #include "../../system/interrupt.h"
 #include "../../system/system.h"
+#include "../pins.h"
 
 void (*INT_InterruptHandler)(void);
 
@@ -57,6 +58,11 @@ void  INTERRUPT_Initialize (void)
  */
 void __interrupt() INTERRUPT_InterruptManager (void)
 {
+    // GPIO pin interrupt on Change(IOC)
+    if(PIE0bits.IOCIE == 1 && PIR0bits.IOCIF == 1)
+    {
+        PIN_MANAGER_IOC();
+    }
     // interrupt handler
     if(INTCONbits.PEIE == 1)
     {

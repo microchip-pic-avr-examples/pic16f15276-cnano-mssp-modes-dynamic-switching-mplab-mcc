@@ -4,28 +4,26 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <logicalFolder name="f1" displayName="LCD" projectFiles="true">
-        <logicalFolder name="f1" displayName="New Folder 1" projectFiles="true">
-        </logicalFolder>
-        <itemPath>digipot.h</itemPath>
-        <itemPath>expander.h</itemPath>
+      <logicalFolder name="f1" displayName="LCD_Header" projectFiles="true">
         <itemPath>lcd.h</itemPath>
+        <itemPath>expander.h</itemPath>
+        <itemPath>digipot.h</itemPath>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
         <logicalFolder name="i2c_host" displayName="i2c_host" projectFiles="true">
           <itemPath>mcc_generated_files/i2c_host/i2c_host_interface.h</itemPath>
-          <itemPath>mcc_generated_files/i2c_host/i2c_host_event_types.h</itemPath>
           <itemPath>mcc_generated_files/i2c_host/mssp1.h</itemPath>
           <itemPath>mcc_generated_files/i2c_host/i2c_host_types.h</itemPath>
+          <itemPath>mcc_generated_files/i2c_host/i2c_host_event_types.h</itemPath>
         </logicalFolder>
         <logicalFolder name="system" displayName="system" projectFiles="true">
-          <itemPath>mcc_generated_files/system/clock.h</itemPath>
-          <itemPath>mcc_generated_files/system/pins.h</itemPath>
-          <itemPath>mcc_generated_files/system/interrupt.h</itemPath>
-          <itemPath>mcc_generated_files/system/system.h</itemPath>
           <itemPath>mcc_generated_files/system/config_bits.h</itemPath>
+          <itemPath>mcc_generated_files/system/interrupt.h</itemPath>
+          <itemPath>mcc_generated_files/system/pins.h</itemPath>
+          <itemPath>mcc_generated_files/system/clock.h</itemPath>
+          <itemPath>mcc_generated_files/system/system.h</itemPath>
         </logicalFolder>
         <logicalFolder name="timer" displayName="timer" projectFiles="true">
           <itemPath>mcc_generated_files/timer/timer_interface.h</itemPath>
@@ -34,13 +32,15 @@
         </logicalFolder>
         <logicalFolder name="uart" displayName="uart" projectFiles="true">
           <itemPath>mcc_generated_files/uart/eusart1.h</itemPath>
-          <itemPath>mcc_generated_files/uart/uart_drv_interface.h</itemPath>
           <itemPath>mcc_generated_files/uart/uart_types.h</itemPath>
+          <itemPath>mcc_generated_files/uart/uart_drv_interface.h</itemPath>
         </logicalFolder>
       </logicalFolder>
+      <logicalFolder name="f2" displayName="SPI_Header" projectFiles="true">
+        <itemPath>user_mssp1.h</itemPath>
+        <itemPath>user_spi_interface.h</itemPath>
+      </logicalFolder>
       <itemPath>application.h</itemPath>
-      <itemPath>user_mssp1.h</itemPath>
-      <itemPath>user_spi_interface.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -49,11 +49,6 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <logicalFolder name="f1" displayName="LCD" projectFiles="true">
-        <itemPath>lcd.c</itemPath>
-        <itemPath>expander.c</itemPath>
-        <itemPath>digipot.c</itemPath>
-      </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
@@ -68,9 +63,9 @@
         <logicalFolder name="system" displayName="system" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/system/src/interrupt.c</itemPath>
+            <itemPath>mcc_generated_files/system/src/config_bits.c</itemPath>
             <itemPath>mcc_generated_files/system/src/clock.c</itemPath>
             <itemPath>mcc_generated_files/system/src/pins.c</itemPath>
-            <itemPath>mcc_generated_files/system/src/config_bits.c</itemPath>
             <itemPath>mcc_generated_files/system/src/system.c</itemPath>
           </logicalFolder>
         </logicalFolder>
@@ -88,13 +83,16 @@
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>application.c</itemPath>
+      <itemPath>digipot.c</itemPath>
+      <itemPath>expander.c</itemPath>
+      <itemPath>lcd.c</itemPath>
       <itemPath>user_mssp1.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>New276_I2C.mc3</itemPath>
+      <itemPath>new.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -105,13 +103,13 @@
         <targetDevice>PIC16F15276</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>nEdbgTool</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.35</languageToolchainVersion>
+        <languageToolchainVersion>2.36</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.8.149"/>
+        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.9.163"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -166,7 +164,7 @@
         <property key="optimization-stable-enable" value="false"/>
         <property key="preprocess-assembler" value="true"/>
         <property key="short-enums" value="true"/>
-        <property key="tentative-definitions" value=""/>
+        <property key="tentative-definitions" value="-fno-common"/>
         <property key="undefine-macros" value=""/>
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>

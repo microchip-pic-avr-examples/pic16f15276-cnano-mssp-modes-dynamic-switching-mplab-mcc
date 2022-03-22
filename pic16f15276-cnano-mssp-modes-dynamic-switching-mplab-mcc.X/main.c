@@ -60,6 +60,7 @@ int main(void)
     printf("\n\tDynamic switching between I2C and SPI of MSSP peripheral");   
     Initialize_I2C_Sensor();
     Timer2_OverflowCallbackRegister(TMR2_UserInterruptHandler);
+    
     while(1)
     {
         Application_Dynamic_Switching_I2C_SPI();

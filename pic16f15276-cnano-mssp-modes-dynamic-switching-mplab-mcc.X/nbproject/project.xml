@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>pic16f15276-dynamic-mssp-switching</name>
-            <creation-uuid>c43b79dc-c7a6-4db2-a00d-a9a8a50e9306</creation-uuid>
+            <name>pic16f15276-cnano-mssp-modes-dynamic-switching-mplab-mcc</name>
+            <creation-uuid>827976a5-bfdf-4781-8773-a255cd338b93</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
