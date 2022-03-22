@@ -2,7 +2,7 @@
 
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# Dynamic Switching between SPI & I2C Modes of MSSP Peripheral using PIC16F15276 microcontroller
+# Dynamic Switching between SPI and I2C Modes of MSSP Peripheral using PIC16F15276 microcontroller
 
 This application demonstrates use of MSSP in real time applications. In this demo, we will realize dynamic switching between SPI and I2C modes using MSSP.
 
