@@ -15,7 +15,7 @@ The PIC16F152xx family of microcontrollers (MCUs) provides simplified set of fea
 - [PIC16F15276 Product Page](https://www.microchip.com/en-us/product/PIC16F15276 "PIC16F15276 Product Page")
 - [PIC16F152xx Family Product Brief](https://ww1.microchip.com/downloads/en/DeviceDoc/40002140A.pdf "PIC16F152xx Family Product Brief")
 - [PIC16F15244 Code Examples on GitHub](https://github.com/microchip-pic-avr-examples "PIC16F15244 Code Examples on GitHub")
-- [PIC16F15244 MCU Family Video](https://youtu.be/nHLv3Th-o-s "PIC16F15244 MCU Family Video")
+- [PIC16F152xx MCU Family Video](https://youtu.be/nHLv3Th-o-s "PIC16F15244 MCU Family Video")
 
 ## Description
 
