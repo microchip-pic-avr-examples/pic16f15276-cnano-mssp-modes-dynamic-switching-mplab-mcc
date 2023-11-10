@@ -10,21 +10,21 @@
         "shortDescription": "This example demonstrates how to dynamically switch between SPI and I2C modes of MSSP peripheral in run time of the PIC microcontroller. Compatible PIC16F152xx family of MCUs are: PIC16F15214, PIC16F15223, PIC16F15244, PIC16F15254, PIC16F15276",
         "ide": {
             "name": "MPLAB X",
-            "semverRange": ">=6.0.0"
+            "semverRange": ">=6.15.0"
         },
         "compiler": [
             {
                 "name": "XC8",
-                "semverRange": "^2.36.0"
+                "semverRange": "^2.45.0"
             }
         ],
         "dfp": {
             "name": "PIC16f1xxxx_DFP",
-            "semverRange": "^1.13.178"
+            "semverRange": "^1.20.366"
         },
         "configurator": {
             "name": "MCC",
-            "semverRange": "^5.1.1"
+            "semverRange": "^5.3.7"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -45,6 +45,8 @@
 		],
         "keywords": [
 			"Melody",
+			"MCC Melody",
+			"Curiosity",
 			"Curiosity Nano",
 			"BPM",
 			"LCD",

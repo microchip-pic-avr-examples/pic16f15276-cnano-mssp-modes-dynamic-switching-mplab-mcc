@@ -79,14 +79,13 @@ For reading the samples from the sensor, internal FIFO flag needs to be enabled.
 
 Microchip’s free IDE, compiler and graphical code generators are used throughout the application firmware development. Following are the tools used for this demo application:
 
-* MPLAB X IDE [v6.00.0](https://www.microchip.com/mplab/mplab-x-ide)
-* XC8 Compiler [v2.36.0](https://www.microchip.com/mplab/compilers)
-* MPLAB Code Configurator (MCC) [v5.0.3](https://www.microchip.com/mplab/mplab-code-configurator)
-* TMR2 MCC Melody driver 4.0.10
-* UART MCC Melody driver 1.6.0
-* MCC Melody Core 2.1.9
-* I2C Host MCC Melody driver 1.0.2
-* Microchip PIC16F1xxxx Series Device Support [1.9.163 or newer](https://packs.download.microchip.com/)
+* [MPLAB X IDE](https://www.microchip.com/mplab/mplab-x-ide) v6.15.0
+* [XC8 Compiler](https://www.microchip.com/mplab/compilers) v2.45.0
+* [MPLAB Code Configurator (MCC)](https://www.microchip.com/mplab/mplab-code-configurator) v5.3.7
+* TMR2 MCC Melody driver 4.0.17
+* EUSART MCC Melody driver 7.1.5
+* I2C Host MCC Melody driver 1.0.4
+* [Microchip PIC16F1xxxx Series Device Support](https://packs.download.microchip.com/) 1.20.366 or newer
 
 ***Note: For running the demo, the installed tool versions should be same or later. This example is not tested with previous versions.***
 
@@ -140,58 +139,3 @@ The required hardware connections are shown in the preceding figure. The figure 
 
 ## Conclusion
 The real time applications based on SPI or I2C can be performed on enormous range of controllers available all around. So the base idea of this example is to explore the possibilty of the PIC16F15276, having a single MSSP to dynamically switch between SPI and I2C modes. The data may vary a bit with respect to actual heartrate devices in the market but the main focus of dynamic mode switching is achieved.
-
-## Appendix
-
-MCC – MPLAB® Code Configurator is a graphical programming environment that generates seamless, easy to understand C code to give a head start to the project, saving the designer’s time to initialize and configure all the modules, and to go through the datasheets. Using an instructive interface, it enables and configures all peripherals and functions specific to the application requirements.
-
-MCC is used for this demo to create the initialization and peripheral configuration code:
-
-* System configuration for clock settings
-* MSSP configuration for I2C and SPI Communication
-* EUSART configuration
-* Timer configuration
-
-## System configuration
-
-The system configuration window of MCC is used for MCU oscillator, Watchdog timer and low voltage programming configuration. Internal oscillator HFINTOSC(32MHz) set for 1MHz frequency is used as a system clock and the Watchdog timer is disabled in the application.
-
-The following figure shows the system configuration setting in MCC tool.
-
-<p align="center">
-  <img width=600 height=auto src="images/system_config.png">
-  <br>Figure 13: System Configuration Settings in MCC tool<br>
-</p>
-
-## MSSP Configuration
-
-The configuration needed for Heartrate Click is, selection of appropriate I2C mode, pins and I2C communication speed. The curiosity Nano Adapater Board mikroBUS slot 2 is used for Heatrate Click, I/O pins for the same are selected through pin manager.
-
-<p align="center">
-  <img width=600 height=auto src="images/mssp_config.png">
-  <br>Figure 14: MSSP Configuration Settings in MCC tool<br>
-</p>
-
-## EUSART Configuration
-
-For displaying the basic heartrate count for verifying and debugging purposes, the configuration needed for configuring EUSART is, selection of relevant Baud Rate and redirecting STDIO to USART.
-
-<p align="center">
-  <img width=600 height=auto src="images/eusart_config.png">
-  <br>Figure 15: EUSART Configuration Settings in MCC tool<br>
-</p>
-
-## Timer Configuration
-
-<p align="center">
-  <img width=600 height=auto src="images/timer_config.png">
-  <br>Figure 16: Timer Configuration<br>
-</p>
-
-## Pin Mapping
-<p align="center">
-  <img width=600 height=auto src="images/pin_config.png">
-  <br>Figure 17: Pin Configuration<br>
-</p>
-
-The SDA and SCL pins are utilized for I2C communication with the Heartrate Sensor. The switch is interfaced to provide the trigger for measuring the heartrate of the user, while LED blinking acts as a visual indication of measuring heartrate process. The SPI pins are configured within the code as the MSSP can only be configured in one mode in the MCC. So the I/O pins are configured in software itself dynamically.
