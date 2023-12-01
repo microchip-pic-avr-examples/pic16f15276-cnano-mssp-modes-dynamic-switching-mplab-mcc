@@ -1,10 +1,10 @@
 {
-    "metaDataVersion": "1.0.1",
+    "metaDataVersion": "1.0.0",
     "category": "com.microchip.ide.project",
     "content": {
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.pic16f15276-cnano-mssp-modes-dynamic-switching-mplab-mcc",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "displayName": "Dynamic Switching between SPI and I2C Modes of MSSP Peripheral using PIC16F15276 microcontroller",
         "projectName": "pic16f15276-cnano-mssp-modes-dynamic-switching-mplab-mcc",
         "shortDescription": "This example demonstrates how to dynamically switch between SPI and I2C modes of MSSP peripheral in run time of the PIC microcontroller. Compatible PIC16F152xx family of MCUs are: PIC16F15214, PIC16F15223, PIC16F15244, PIC16F15254, PIC16F15276",
