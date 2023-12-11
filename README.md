@@ -85,7 +85,7 @@ Microchip's XC8 Complier and MPLAB® Code Configurator (MCC) are used throughout
 * TMR2 MCC Melody driver 4.0.17
 * EUSART MCC Melody driver 7.1.5
 * I<sup>2</sup>C Host MCC Melody driver 1.0.4
-* [Microchip PIC16F1xxxx Series Device Support](https://packs.download.microchip.com/) 1.20.382 or newer
+* [Microchip PIC16F1xxxx Series Device Support](https://packs.download.microchip.com/) 1.23.382 or newer
 
 Note: For running the demo, the installed tool versions should be same or later. This example is not tested with previous versions.
 
